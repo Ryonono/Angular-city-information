@@ -1,0 +1,29 @@
+<h3>Travel Plan Form</h3>
+
+<form #form=ngForm (ngSubmit)="onSubmit(form)">
+  <div>
+    <label>Country</label>
+    <!-- formControlName="country" -->
+    <select [(ngModel)]="country" name="country" required>
+      <option *ngFor="let data of datas" [ngValue]="data.name">{{data.name}}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>City</label>
+    <input type="text" [(ngModel)]="city" name="country" required>
+  </div>
+
+  <div>
+    <label>Preferences</label>
+    <input type="textarea" [(ngModel)]="preferences" name="preferences">
+  </div>
+  <button type="submit" [disabled]="form.status == 'INVALID'">Submit</button>
+</form>
+
+<div>
+  <h3>Your Input</h3>
+  <p>Country: {{country}}</p>
+  <p>City: {{city}}</p>
+  <p>Preferences: {{preferences}}</p>
+</div>
