@@ -6,7 +6,7 @@ import { SearchComponent } from './search/search.component';
 const routes: Routes = [
   // 一番初めに表示されるルートモジュールに関しては path: ''で設定
   { path: '', component: SearchComponent },
-  { path: '/result', component: ResultComponent },
+  { path: 'result', component: ResultComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
