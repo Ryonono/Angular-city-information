@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ResultComponent } from './result/result.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   // 一番初めに表示されるルートモジュールに関しては path: ''で設定
   { path: '', component: SearchComponent },
+  { path: '/result', component: ResultComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
