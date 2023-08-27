@@ -12,8 +12,9 @@ def get_data():
     data = request.get_json()
     country = (data["country"] + " was sent to Flask")
     city = (data["city"] + " was sent to Flask")
+    preferences = (data["preferences"])
     # 今まではcountry, cityの値を更新した後その値をdataに戻していなかったので、新たな変数resultに更新後の値を格納
-    result = {"country": country, "city": city}
+    result = {"country": country, "city": city, "preferences": preferences}
 
     # 状態を見てみると、country, cityの値はFlask側に渡されていた
     print(result)
